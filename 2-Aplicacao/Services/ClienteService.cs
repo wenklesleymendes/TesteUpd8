@@ -1,8 +1,6 @@
 ﻿using Domino.Entities;
 using InfraEstrutura.Data;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Aplicacao.Services
 {

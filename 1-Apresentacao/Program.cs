@@ -1,6 +1,6 @@
+using Aplicacao.Services;
 using InfraEstrutura.Data;
 using Microsoft.EntityFrameworkCore;
-using Aplicacao.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\views\\cliente\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\views\\cliente\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\controllers\\estadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\controllers\\estadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,14 +39,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Cadastro.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Views\\Cliente\\Cadastro.cshtml",
-              "RelativeDocumentMoniker": "1-Apresentacao\\Views\\Cliente\\Cadastro.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Views\\Cliente\\Cadastro.cshtml",
-              "RelativeToolTip": "1-Apresentacao\\Views\\Cliente\\Cadastro.cshtml",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAkwGgAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-22T16:24:22.002Z",
+              "Title": "EstadosController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\EstadosController.cs",
+              "RelativeDocumentMoniker": "1-Apresentacao\\Controllers\\EstadosController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\EstadosController.cs",
+              "RelativeToolTip": "1-Apresentacao\\Controllers\\EstadosController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T17:12:13.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Program.cs",
+              "RelativeDocumentMoniker": "1-Apresentacao\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Program.cs",
+              "RelativeToolTip": "1-Apresentacao\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T17:12:02.107Z",
               "EditorCaption": ""
             }
           ]

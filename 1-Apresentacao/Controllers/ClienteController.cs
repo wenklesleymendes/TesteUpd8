@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Aplicacao.Services;
 using Domino.Entities;
-using System.Threading.Tasks;
-using Aplicacao.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers
 {

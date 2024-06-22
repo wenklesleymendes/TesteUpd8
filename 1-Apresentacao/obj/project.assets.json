@@ -4117,7 +4117,6 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Application >= 1.0.0",
-      "Domain >= 1.0.0",
       "Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.6"
     ]
@@ -4160,9 +4159,6 @@
           "projectReferences": {
             "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\2-Aplicacao\\Application.csproj": {
               "projectPath": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\2-Aplicacao\\Application.csproj"
-            },
-            "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\3-Domino\\Domain.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\3-Domino\\Domain.csproj"
             },
             "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\4-InfraEstrutura\\Infrastructure.csproj": {
               "projectPath": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\4-InfraEstrutura\\Infrastructure.csproj"

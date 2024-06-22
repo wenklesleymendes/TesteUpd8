@@ -6,7 +6,7 @@
 
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-8">
             <div class="card p-4">
                 <div class="card-header text-center">
                     <img src="~/images/logo.png" alt="Upd8 Logo" style="height: 50px; margin-bottom: 10px;">
@@ -15,22 +15,22 @@
                 <div class="card-body">
                     <form asp-action="Cadastro" method="post">
                         <div class="row mb-3">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <label for="Cpf" class="form-label">CPF:</label>
                                 <input type="text" class="form-control" id="Cpf" name="Cpf" value="@Model.Cpf" />
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-6">
                                 <label for="Nome" class="form-label">Nome:</label>
                                 <input type="text" class="form-control" id="Nome" name="Nome" value="@Model.Nome" />
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <label for="DataNascimento" class="form-label">Data Nascimento:</label>
                                 <input type="date" class="form-control" id="DataNascimento" name="DataNascimento" value="@Model.DataNascimento.ToString("yyyy-MM-dd")" />
                             </div>
-                            <div class="col-md-8">
-                                <label class="form-label d-block">Sexo:</label>
+                            <div class="col-md-6">
+                                <label class="form-label">Sexo:</label>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" id="Masculino" name="Sexo" value="Masculino" @(Model.Sexo == "Masculino" ? "checked" : "") />
                                     <label class="form-check-label" for="Masculino">Masculino</label>

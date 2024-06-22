@@ -77,12 +77,15 @@
 @section Scripts {
     <script>
         $(document).ready(function () {
-            // Fetch estados from API
+            // Fetch estados from IBGE API
             $.ajax({
-                url: '/api/estados',
+                url: 'https://servicodados.ibge.gov.br/api/v1/localidades/estados',
                 method: 'GET',
                 success: function (data) {
                     var estadoSelect = $('#Estado');
+                    data.sort(function (a, b) {
+                        return a.nome.localeCompare(b.nome);
+                    });
                     data.forEach(function (estado) {
                         estadoSelect.append(new Option(estado.nome, estado.id));
                     });
@@ -94,12 +97,15 @@
                 var estadoId = $(this).val();
                 if (estadoId) {
                     $.ajax({
-                        url: '/api/estados/' + estadoId + '/cidades',
+                        url: 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/' + estadoId + '/municipios',
                         method: 'GET',
                         success: function (data) {
                             var cidadeSelect = $('#Cidade');
                             cidadeSelect.empty();
                             cidadeSelect.append(new Option('Selecione', ''));
+                            data.sort(function (a, b) {
+                                return a.nome.localeCompare(b.nome);
+                            });
                             data.forEach(function (cidade) {
                                 cidadeSelect.append(new Option(cidade.nome, cidade.id));
                             });

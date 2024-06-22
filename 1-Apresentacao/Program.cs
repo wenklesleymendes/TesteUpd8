@@ -11,8 +11,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ClienteContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Register the ClienteService
+// Register the services
 builder.Services.AddScoped<ClienteService>();
+builder.Services.AddScoped<EstadoService>();
 
 var app = builder.Build();
 
@@ -33,5 +34,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllers(); // Add this to map API controllers
 
 app.Run();

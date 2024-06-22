@@ -1,0 +1,51 @@
+﻿@model Domino.Entities.Cliente
+
+@{
+    ViewData["Title"] = "Cadastro Cliente";
+}
+
+<h2>Cadastro Cliente</h2>
+
+<form asp-action="Cadastro" method="post">
+    <div>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="Cpf" asp-for="Cpf" readonly>
+    </div>
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="Nome" asp-for="Nome">
+    </div>
+    <div>
+        <label for="dataNascimento">Data Nascimento:</label>
+        <input type="date" id="dataNascimento" name="DataNascimento" asp-for="DataNascimento">
+    </div>
+    <div>
+        <label>Sexo:</label>
+        <input type="radio" id="masculino" name="Sexo" value="M" asp-for="Sexo"> Masculino
+        <input type="radio" id="feminino" name="Sexo" value="F" asp-for="Sexo"> Feminino
+    </div>
+    <div>
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="Endereco" asp-for="Endereco">
+    </div>
+    <div>
+        <label for="estado">Estado:</label>
+        <select id="estado" name="Estado" asp-for="Estado">
+            <option>Selecione</option>
+            <option value="SP">SP</option>
+            <option value="RJ">RJ</option>
+            <!-- Adicione outros estados conforme necessário -->
+        </select>
+    </div>
+    <div>
+        <label for="cidade">Cidade:</label>
+        <select id="cidade" name="Cidade" asp-for="Cidade">
+            <option>Selecione</option>
+            <!-- Adicione opções de cidades conforme necessário -->
+        </select>
+    </div>
+    <div>
+        <button type="submit">Salvar</button>
+        <button type="reset">Limpar</button>
+    </div>
+</form>

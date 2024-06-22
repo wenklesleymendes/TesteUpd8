@@ -1,5 +1,6 @@
 using InfraEstrutura.Data;
 using Microsoft.EntityFrameworkCore;
+using Aplicacao.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,9 @@ builder.Services.AddControllersWithViews();
 // Add DbContext with SQL Server
 builder.Services.AddDbContext<ClienteContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Register the ClienteService
+builder.Services.AddScoped<ClienteService>();
 
 var app = builder.Build();
 

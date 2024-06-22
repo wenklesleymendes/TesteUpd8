@@ -1,12 +1,12 @@
 ﻿using Aplicacao.Services;
 using Domino.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace Apresentacao.Controllers
+namespace Presentation.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ClienteController : ControllerBase
+    public class ClienteController : Controller
     {
         private readonly ClienteService _service;
 
@@ -15,46 +15,37 @@ namespace Apresentacao.Controllers
             _service = service;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<List<Cliente>>> Get()
+        // Ação para exibir a página de cadastro
+        public IActionResult Cadastro()
         {
-            return await _service.ObterTodosClientesAsync();
+            return View();
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Cliente>> Get(int id)
-        {
-            var cliente = await _service.ObterClientePorIdAsync(id);
-            if (cliente == null)
-            {
-                return NotFound();
-            }
-            return cliente;
-        }
-
+        // Ação para processar o cadastro do cliente
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] Cliente cliente)
+        public async Task<IActionResult> Cadastro(Cliente cliente)
         {
-            await _service.AdicionarClienteAsync(cliente);
-            return CreatedAtAction(nameof(Get), new { id = cliente.Id }, cliente);
-        }
-
-        [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, [FromBody] Cliente cliente)
-        {
-            if (id != cliente.Id)
+            if (ModelState.IsValid)
             {
-                return BadRequest();
+                await _service.AdicionarClienteAsync(cliente);
+                return RedirectToAction("Consulta");
             }
-            await _service.AtualizarClienteAsync(cliente);
-            return NoContent();
+            return View(cliente);
         }
 
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(int id)
+        // Ação para exibir a página de consulta
+        public async Task<IActionResult> Consulta()
+        {
+            var clientes = await _service.ObterTodosClientesAsync();
+            return View(clientes);
+        }
+
+        // Ação para excluir um cliente
+        [HttpPost]
+        public async Task<IActionResult> Excluir(int id)
         {
             await _service.ExcluirClienteAsync(id);
-            return NoContent();
+            return RedirectToAction("Consulta");
         }
     }
 }

@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Domino.Entities.Cliente>
+
+@{
+    ViewData["Title"] = "Consulta Cliente";
+}
+
+<h2>Consulta Cliente</h2>
+
+<form method="get">
+    <div>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="Cpf">
+    </div>
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="Nome">
+    </div>
+    <div>
+        <label for="dataNascimento">Data Nascimento:</label>
+        <input type="date" id="dataNascimento" name="DataNascimento">
+    </div>
+    <div>
+        <label>Sexo:</label>
+        <input type="radio" id="masculino" name="Sexo" value="M"> Masculino
+        <input type="radio" id="feminino" name="Sexo" value="F"> Feminino
+    </div>
+    <div>
+        <label for="estado">Estado:</label>
+        <select id="estado" name="Estado">
+            <option>Todos</option>
+            <option value="SP">SP</option>
+            <option value="RJ">RJ</option>
+            <!-- Adicione outros estados conforme necessário -->
+        </select>
+    </div>
+    <div>
+        <label for="cidade">Cidade:</label>
+        <select id="cidade" name="Cidade">
+            <option>Todos</option>
+            <!-- Adicione opções de cidades conforme necessário -->
+        </select>
+    </div>
+    <div>
+        <button type="submit">Pesquisar</button>
+        <button type="reset">Limpar</button>
+    </div>
+</form>
+
+<h3>Resultado da Pesquisa</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Ações</th>
+            <th>Cliente</th>
+            <th>CPF</th>
+            <th>Data Nasc.</th>
+            <th>Estado</th>
+            <th>Cidade</th>
+            <th>Sexo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>
+                    <form asp-action="Excluir" method="post" style="display:inline">
+                        <input type="hidden" name="id" value="@cliente.Id">
+                        <button type="submit">Excluir</button>
+                    </form>
+                </td>
+                <td>@cliente.Nome</td>
+                <td>@cliente.Cpf</td>
+                <td>@cliente.DataNascimento.ToString("dd/MM/yyyy")</td>
+                <td>@cliente.Estado</td>
+                <td>@cliente.Cidade</td>
+                <td>@cliente.Sexo</td>
+            </tr>
+        }
+    </tbody>
+</table>

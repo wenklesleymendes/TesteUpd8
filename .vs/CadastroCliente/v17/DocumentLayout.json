@@ -7,28 +7,24 @@
       "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62F1720B-63DD-4303-832E-189F31BD8CC6}|2-Aplicacao\\Application.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\2-aplicacao\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62F1720B-63DD-4303-832E-189F31BD8CC6}|2-Aplicacao\\Application.csproj|solutionrelative:2-aplicacao\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC352321-D373-4E3D-A777-DCDBC3AA9EA1}|4-InfraEstrutura\\Infrastructure.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\4-infraestrutura\\data\\clientecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC352321-D373-4E3D-A777-DCDBC3AA9EA1}|4-InfraEstrutura\\Infrastructure.csproj|solutionrelative:4-infraestrutura\\data\\clientecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C73657D-30D1-4087-AEAE-37CD7C019C83}|3-Domino\\Domain.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\3-domino\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C73657D-30D1-4087-AEAE-37CD7C019C83}|3-Domino\\Domain.csproj|solutionrelative:3-domino\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,6 +55,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ClienteContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\4-InfraEstrutura\\Data\\ClienteContext.cs",
+              "RelativeDocumentMoniker": "4-InfraEstrutura\\Data\\ClienteContext.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\4-InfraEstrutura\\Data\\ClienteContext.cs",
+              "RelativeToolTip": "4-InfraEstrutura\\Data\\ClienteContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T05:03:24.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\appsettings.json",
               "RelativeDocumentMoniker": "1-Apresentacao\\appsettings.json",
@@ -66,33 +75,20 @@
               "RelativeToolTip": "1-Apresentacao\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-22T04:30:16.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "1-Apresentacao\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "1-Apresentacao\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-22T04:29:53.669Z",
+              "WhenOpened": "2024-06-22T05:02:58.708Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "1-Apresentacao\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "1-Apresentacao\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "1-Apresentacao\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "1-Apresentacao\\Controllers\\ClienteController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T04:29:16.305Z",
+              "WhenOpened": "2024-06-22T04:52:13.108Z",
               "EditorCaption": ""
             },
             {
@@ -103,47 +99,36 @@
               "RelativeDocumentMoniker": "1-Apresentacao\\Program.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Program.cs",
               "RelativeToolTip": "1-Apresentacao\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T04:25:44.613Z",
+              "WhenOpened": "2024-06-22T04:51:14.851Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ClienteService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\2-Aplicacao\\Services\\ClienteService.cs",
-              "RelativeDocumentMoniker": "2-Aplicacao\\Services\\ClienteService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\2-Aplicacao\\Services\\ClienteService.cs",
-              "RelativeToolTip": "2-Aplicacao\\Services\\ClienteService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T04:22:00.598Z",
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "1-Apresentacao\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "1-Apresentacao\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-22T04:48:41.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\3-Domino\\Entities\\Cliente.cs",
-              "RelativeDocumentMoniker": "3-Domino\\Entities\\Cliente.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\3-Domino\\Entities\\Cliente.cs",
-              "RelativeToolTip": "3-Domino\\Entities\\Cliente.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T04:21:22.283Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ClienteContext.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\4-InfraEstrutura\\Data\\ClienteContext.cs",
-              "RelativeDocumentMoniker": "4-InfraEstrutura\\Data\\ClienteContext.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\4-InfraEstrutura\\Data\\ClienteContext.cs",
-              "RelativeToolTip": "4-InfraEstrutura\\Data\\ClienteContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "1-Apresentacao\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "1-Apresentacao\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T04:19:53.16Z"
+              "WhenOpened": "2024-06-22T04:47:57.95Z",
+              "EditorCaption": ""
             }
           ]
         },

@@ -1,51 +1,40 @@
-﻿using Aplicacao.Services;
+﻿using Microsoft.AspNetCore.Mvc;
 using Domino.Entities;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Threading.Tasks;
+using Aplicacao.Services;
 
 namespace Presentation.Controllers
 {
     public class ClienteController : Controller
     {
-        private readonly ClienteService _service;
+        private readonly ClienteService _clienteService;
 
-        public ClienteController(ClienteService service)
+        public ClienteController(ClienteService clienteService)
         {
-            _service = service;
+            _clienteService = clienteService;
         }
 
-        // Ação para exibir a página de cadastro
         public IActionResult Cadastro()
         {
-            return View();
+            var model = new Cliente();
+            return View(model);
         }
 
-        // Ação para processar o cadastro do cliente
         [HttpPost]
         public async Task<IActionResult> Cadastro(Cliente cliente)
         {
             if (ModelState.IsValid)
             {
-                await _service.AdicionarClienteAsync(cliente);
-                return RedirectToAction("Consulta");
+                await _clienteService.AdicionarClienteAsync(cliente);
+                return RedirectToAction("Index");
             }
             return View(cliente);
         }
 
-        // Ação para exibir a página de consulta
-        public async Task<IActionResult> Consulta()
+        public async Task<IActionResult> Index()
         {
-            var clientes = await _service.ObterTodosClientesAsync();
+            var clientes = await _clienteService.ObterTodosClientesAsync();
             return View(clientes);
-        }
-
-        // Ação para excluir um cliente
-        [HttpPost]
-        public async Task<IActionResult> Excluir(int id)
-        {
-            await _service.ExcluirClienteAsync(id);
-            return RedirectToAction("Consulta");
         }
     }
 }

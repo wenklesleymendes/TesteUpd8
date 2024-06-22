@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "K6DB43UlItG8sCtU80m4RdqZFA22wDuLh9daS3hzU2U=",
+  "Hash": "LgsQLuRBcZglVokC0AgCA3IakdqCfWaE62S/6uwoDvs=",
   "Source": "Presentation",
   "BasePath": "_content/Presentation",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\wwwroot\\images\\logo.png",
+      "SourceId": "Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\wwwroot\\",
+      "BasePath": "_content/Presentation",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\wwwroot\\js\\site.js",

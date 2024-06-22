@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1834DCDB-58B7-4240-BB5A-B58AD7BB944C}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{62F1720B-63DD-4303-832E-189F31BD8CC6}|2-Aplicacao\\Application.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\2-aplicacao\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62F1720B-63DD-4303-832E-189F31BD8CC6}|2-Aplicacao\\Application.csproj|solutionrelative:2-aplicacao\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,20 +58,72 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\appsettings.json",
+              "RelativeDocumentMoniker": "1-Apresentacao\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\appsettings.json",
+              "RelativeToolTip": "1-Apresentacao\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-22T04:30:16.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "1-Apresentacao\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "1-Apresentacao\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-22T04:29:53.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "1-Apresentacao\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "1-Apresentacao\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T04:29:16.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Program.cs",
+              "RelativeDocumentMoniker": "1-Apresentacao\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Program.cs",
+              "RelativeToolTip": "1-Apresentacao\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T04:25:44.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ClienteService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\2-Aplicacao\\Services\\ClienteService.cs",
               "RelativeDocumentMoniker": "2-Aplicacao\\Services\\ClienteService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\2-Aplicacao\\Services\\ClienteService.cs",
               "RelativeToolTip": "2-Aplicacao\\Services\\ClienteService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-22T04:22:00.598Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\3-Domino\\Entities\\Cliente.cs",
               "RelativeDocumentMoniker": "3-Domino\\Entities\\Cliente.cs",
@@ -63,12 +131,11 @@
               "RelativeToolTip": "3-Domino\\Entities\\Cliente.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T04:21:22.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T04:21:22.283Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "ClienteContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\4-InfraEstrutura\\Data\\ClienteContext.cs",
               "RelativeDocumentMoniker": "4-InfraEstrutura\\Data\\ClienteContext.cs",
@@ -76,8 +143,7 @@
               "RelativeToolTip": "4-InfraEstrutura\\Data\\ClienteContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T04:19:53.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T04:19:53.16Z"
             }
           ]
         },

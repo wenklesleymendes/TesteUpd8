@@ -10,80 +10,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Cliente/consulta-cliente.css">
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        .header-logo {
-            max-height: 50px;
-            margin-right: 20px;
+        .card-header.inverted {
+            background-color: white;
+            color: #007bff; /* Bootstrap primary color */
         }
 
-        .card-header.bg-primary {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-form label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .search-form .form-control {
-            margin-bottom: 15px;
-        }
+            .card-header.inverted h2 {
+                margin: 0;
+            }
     </style>
 </head>
 <body>
     <div class="container mt-5">
         <div class="card">
-            <div class="card-header bg-primary text-white">
-                <img src="~/images/logo.png" alt="Logo" class="header-logo">
-                <h2>Consulta Cliente</h2>
+            <div class="card-header inverted d-flex align-items-center">
+                <img src="~/images/logo.png" alt="Logo" class="header-logo mr-2">
+                <h2 class="mb-0">Consulta Cliente</h2>
             </div>
             <div class="card-body">
                 <form method="get" class="search-form">
-                    <div class="form-row">
-                        <div class="form-group col-md-3">
-                            <label for="cpf">CPF:</label>
-                            <input type="text" class="form-control" id="cpf" name="Cpf">
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label for="nome">Nome:</label>
-                            <input type="text" class="form-control" id="nome" name="Nome">
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label for="dataNascimento">Data Nascimento:</label>
-                            <input type="date" class="form-control" id="dataNascimento" name="DataNascimento">
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label>Sexo:</label>
-                            <div>
-                                <input type="radio" id="masculino" name="Sexo" value="M"> Masculino
-                                <input type="radio" id="feminino" name="Sexo" value="F"> Feminino
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="cpf">CPF:</label>
+                                <input type="text" class="form-control" id="cpf" name="Cpf">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="nome">Nome:</label>
+                                <input type="text" class="form-control" id="nome" name="Nome">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="dataNascimento">Data Nascimento:</label>
+                                <input type="date" class="form-control" id="dataNascimento" name="DataNascimento">
                             </div>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-3">
-                            <label for="estado">Estado:</label>
-                            <select class="form-control" id="estado" name="Estado">
-                                <option>Todos</option>
-                                <option value="SP">SP</option>
-                                <option value="RJ">RJ</option>
-                                <!-- Adicione outros estados conforme necessário -->
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label for="cidade">Cidade:</label>
-                            <select class="form-control" id="cidade" name="Cidade">
-                                <option>Todos</option>
-                                <!-- Adicione opções de cidades conforme necessário -->
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6 d-flex align-items-end">
-                            <button type="submit" class="btn btn-primary mr-2">Pesquisar</button>
-                            <button type="reset" class="btn btn-secondary">Limpar</button>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Sexo:</label>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="masculino" name="Sexo" value="M">
+                                    <label class="form-check-label" for="masculino">Masculino</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="feminino" name="Sexo" value="F">
+                                    <label class="form-check-label" for="feminino">Feminino</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="estado">Estado:</label>
+                                <select class="form-control" id="estado" name="Estado">
+                                    <option>Todos</option>
+                                    <option value="SP">SP</option>
+                                    <option value="RJ">RJ</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="cidade">Cidade:</label>
+                                <select class="form-control" id="cidade" name="Cidade">
+                                    <option>Todos</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 d-flex align-items-end">
+                                <button type="submit" class="btn btn-primary btn-block mr-2">Pesquisar</button>
+                                <button type="reset" class="btn btn-secondary btn-block">Limpar</button>
+                            </div>
                         </div>
                     </div>
                 </form>

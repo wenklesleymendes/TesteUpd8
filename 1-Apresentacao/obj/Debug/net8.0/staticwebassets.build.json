@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LgsQLuRBcZglVokC0AgCA3IakdqCfWaE62S/6uwoDvs=",
+  "Hash": "Fvym6AaIciQyswX3U8DLo/oniqbUwiHiYm/ZnF7f2Tc=",
   "Source": "Presentation",
   "BasePath": "_content/Presentation",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Presentation.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\wwwroot\\css\\Cliente\\consulta-cliente.css",
+      "SourceId": "Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\wwwroot\\",
+      "BasePath": "_content/Presentation",
+      "RelativePath": "css/Cliente/consulta-cliente.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Cliente\\consulta-cliente.css"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\wwwroot\\css\\site.css",

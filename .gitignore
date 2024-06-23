@@ -1,0 +1,18 @@
+# Ignore arquivos de configuração do Visual Studio
+.vs/
+*.suo
+
+# Ignore pastas bin e obj
+bin/
+obj/
+
+# Ignore arquivos específicos de debug e build
+*.dll
+*.pdb
+*.exe
+*.cache
+*.csproj.user
+
+# Ignore arquivos e pastas gerados automaticamente
+bin/Debug/
+obj/Debug/

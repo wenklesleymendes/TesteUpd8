@@ -1,60 +1,43 @@
-﻿$(document).ready(function () {
-    $('#editClienteModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget);
-        var clienteId = button.data('id');
-        console.log('Cliente ID:', clienteId); // Depuração
-
-        $.ajax({
-            url: '/Cliente/GetCliente', // Certifique-se de que a URL está correta
-            type: 'GET',
-            data: { id: clienteId },
-            success: function (data) {
-                console.log('Dados recebidos:', data); // Depuração
-                $('#editClienteId').val(data.id);
-                $('#editNome').val(data.nome);
-                $('#editCpf').val(data.cpf);
-                $('#editDataNascimento').val(data.dataNascimento.split('T')[0]);
-                $('#editEstado').val(data.estado);
-                $('#editCidade').val(data.cidade);
-                $('#editSexo').val(data.sexo);
-            },
-            error: function (xhr, status, error) {
-                console.error('Erro ao carregar os dados do cliente:', error); // Depuração
-                alert('Erro ao carregar os dados do cliente.');
-            }
-        });
-    });
-
-    $('#saveEditCliente').on('click', function () {
-        var cliente = {
-            Id: $('#editClienteId').val(),
-            Nome: $('#editNome').val(),
-            Cpf: $('#editCpf').val(),
-            DataNascimento: $('#editDataNascimento').val(),
-            Estado: $('#editEstado').val(),
-            Cidade: $('#editCidade').val(),
-            Sexo: $('#editSexo').val()
-        };
-
-        console.log('Dados para salvar:', cliente); // Depuração
-
-        $.ajax({
-            url: '/Cliente/Edit', // Certifique-se de que a URL está correta
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify(cliente),
-            success: function (data) {
-                if (data.success) {
-                    $('#editClienteModal').modal('hide');
-                    location.reload(); // Recarregar a página para ver as atualizações
-                } else {
-                    alert('Erro ao salvar o cliente');
-                }
-            },
-            error: function (xhr, status, error) {
-                console.error('Erro ao salvar o cliente:', error); // Depuração
-                alert('Erro ao salvar o cliente.');
-            }
-        });
-    });
-});
+﻿<div class="modal fade" id="editClienteModal" tabindex="-1" role="dialog" aria-labelledby="editClienteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editClienteModalLabel">Editar Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="editClienteId" />
+                <div class="form-group">
+                    <label for="editNome">Nome</label>
+                    <input type="text" class="form-control" id="editNome" />
+                </div>
+                <div class="form-group">
+                    <label for="editCpf">CPF</label>
+                    <input type="text" class="form-control" id="editCpf" />
+                </div>
+                <div class="form-group">
+                    <label for="editDataNascimento">Data de Nascimento</label>
+                    <input type="date" class="form-control" id="editDataNascimento" />
+                </div>
+                <div class="form-group">
+                    <label for="editEstado">Estado</label>
+                    <input type="text" class="form-control" id="editEstado" />
+                </div>
+                <div class="form-group">
+                    <label for="editCidade">Cidade</label>
+                    <input type="text" class="form-control" id="editCidade" />
+                </div>
+                <div class="form-group">
+                    <label for="editSexo">Sexo</label>
+                    <input type="text" class="form-control" id="editSexo" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" id="saveEditCliente">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,7 +3,7 @@ using Domino.Entities;
 using System.Threading.Tasks;
 using Aplicacao.Services;
 using Microsoft.Extensions.Logging;
-using System;
+using System.Collections.Generic;
 
 namespace Presentation.Controllers
 {
@@ -58,7 +58,16 @@ namespace Presentation.Controllers
             {
                 return NotFound();
             }
-            return Json(cliente);
+            return Json(new
+            {
+                id = cliente.Id,
+                nome = cliente.Nome,
+                cpf = cliente.Cpf,
+                dataNascimento = cliente.DataNascimento.ToString("yyyy-MM-dd"), // Formato compatível com input date
+                estado = cliente.Estado,
+                cidade = cliente.Cidade,
+                sexo = cliente.Sexo
+            });
         }
 
         [HttpPost]

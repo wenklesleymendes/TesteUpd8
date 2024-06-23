@@ -13,7 +13,6 @@ builder.Services.AddDbContext<ClienteContext>(options =>
 
 // Register the services
 builder.Services.AddScoped<ClienteService>();
-builder.Services.AddScoped<EstadoService>();
 
 var app = builder.Build();
 

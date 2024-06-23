@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@model IEnumerable<Domino.Entities.Cliente>
+
+@{
+    ViewData["Title"] = "Consulta Cliente";
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -203,12 +209,14 @@
             $('#editClienteModal').on('show.bs.modal', function (event) {
                 var button = $(event.relatedTarget);
                 var clienteId = button.data('id');
+                console.log('Cliente ID:', clienteId); // Adicione esta linha para depuração
 
                 $.ajax({
                     url: '@Url.Action("GetCliente", "Cliente")',
                     type: 'GET',
                     data: { id: clienteId },
                     success: function (data) {
+                        console.log('Dados recebidos:', data); // Adicione esta linha para depuração
                         $('#editClienteId').val(data.id);
                         $('#editNome').val(data.nome);
                         $('#editCpf').val(data.cpf);
@@ -218,6 +226,7 @@
                         $('#editSexo').val(data.sexo);
                     },
                     error: function (xhr, status, error) {
+                        console.error('Erro ao carregar os dados do cliente:', error); // Adicione esta linha para depuração
                         alert('Erro ao carregar os dados do cliente.');
                     }
                 });
@@ -234,6 +243,8 @@
                     Sexo: $('#editSexo').val()
                 };
 
+                console.log('Dados para salvar:', cliente); // Adicione esta linha para depuração
+
                 $.ajax({
                     url: '@Url.Action("Edit", "Cliente")',
                     type: 'POST',
@@ -248,6 +259,7 @@
                         }
                     },
                     error: function (xhr, status, error) {
+                        console.error('Erro ao salvar o cliente:', error); // Adicione esta linha para depuração
                         alert('Erro ao salvar o cliente.');
                     }
                 });

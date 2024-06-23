@@ -7,8 +7,12 @@
       "RelativeMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\views\\cliente\\consulta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\wwwroot\\css\\cliente\\consulta-cliente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\wwwroot\\css\\cliente\\consulta-cliente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{077F221D-FDF6-4D1B-8057-B4EFA5C67A08}|2-Aplicacao\\Application.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\2-aplicacao\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{077F221D-FDF6-4D1B-8057-B4EFA5C67A08}|2-Aplicacao\\Application.csproj|solutionrelative:2-aplicacao\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,28 +42,41 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClienteService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\2-Aplicacao\\Services\\ClienteService.cs",
+              "RelativeDocumentMoniker": "2-Aplicacao\\Services\\ClienteService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\2-Aplicacao\\Services\\ClienteService.cs",
+              "RelativeToolTip": "2-Aplicacao\\Services\\ClienteService.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAmwDIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T12:53:20.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "1-Apresentacao\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "1-Apresentacao\\Controllers\\ClienteController.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAwwGgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T11:53:55.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Consulta.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Views\\Cliente\\Consulta.cshtml",
               "RelativeDocumentMoniker": "1-Apresentacao\\Views\\Cliente\\Consulta.cshtml",
               "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Views\\Cliente\\Consulta.cshtml",
               "RelativeToolTip": "1-Apresentacao\\Views\\Cliente\\Consulta.cshtml",
-              "ViewState": "AQIAACcAAAAAAAAAAADwv5wAAAAAAAAA",
+              "ViewState": "AQIAAKAAAAAAAAAAAAAowAIBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-23T02:32:05.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "consulta-cliente.css",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\wwwroot\\css\\Cliente\\consulta-cliente.css",
-              "RelativeDocumentMoniker": "1-Apresentacao\\wwwroot\\css\\Cliente\\consulta-cliente.css",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\wwwroot\\css\\Cliente\\consulta-cliente.css",
-              "RelativeToolTip": "1-Apresentacao\\wwwroot\\css\\Cliente\\consulta-cliente.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-23T02:31:39.636Z",
               "EditorCaption": ""
             }
           ]

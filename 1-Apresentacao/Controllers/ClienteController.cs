@@ -3,6 +3,7 @@ using Domino.Entities;
 using System.Threading.Tasks;
 using Aplicacao.Services;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace Presentation.Controllers
 {
@@ -48,6 +49,56 @@ namespace Presentation.Controllers
         {
             var clientes = await _clienteService.ObterTodosClientesAsync();
             return View(clientes);
+        }
+
+        public async Task<IActionResult> GetCliente(int id)
+        {
+            var cliente = await _clienteService.ObterClientePorIdAsync(id);
+            if (cliente == null)
+            {
+                return NotFound();
+            }
+            return Json(cliente);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Cliente cliente)
+        {
+            if (!ModelState.IsValid)
+            {
+                return Json(new { success = false });
+            }
+
+            try
+            {
+                await _clienteService.AtualizarClienteAsync(cliente);
+                _logger.LogInformation("Cliente atualizado com sucesso.");
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao atualizar o cliente.");
+                return Json(new { success = false });
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                await _clienteService.ExcluirClienteAsync(id);
+                _logger.LogInformation("Cliente removido com sucesso.");
+                TempData["SuccessMessage"] = "Cliente removido com sucesso!";
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao remover o cliente.");
+                TempData["ErrorMessage"] = "Erro ao remover o cliente. Tente novamente.";
+            }
+            return RedirectToAction("Consulta");
         }
     }
 }

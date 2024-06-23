@@ -92,6 +92,12 @@
                 @TempData["SuccessMessage"]
             </div>
         }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger mt-4">
+                @TempData["ErrorMessage"]
+            </div>
+        }
 
         <div class="card mt-4">
             <div class="card-header bg-info text-white">
@@ -115,11 +121,11 @@
                         {
                             <tr>
                                 <td>
-                                    <form asp-action="Excluir" method="post" style="display:inline">
+                                    <form asp-action="Delete" method="post" style="display:inline">
                                         <input type="hidden" name="id" value="@cliente.Id">
                                         <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
                                     </form>
-                                    <button class="btn btn-success btn-sm">Editar</button>
+                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editClienteModal" data-id="@cliente.Id">Editar</button>
                                 </td>
                                 <td>@cliente.Nome</td>
                                 <td>@cliente.Cpf</td>
@@ -150,7 +156,103 @@
         </div>
     </div>
 
+    <!-- Modal de Edição -->
+    <div class="modal fade" id="editClienteModal" tabindex="-1" role="dialog" aria-labelledby="editClienteModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editClienteModalLabel">Editar Cliente</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editClienteForm">
+                        <input type="hidden" id="editClienteId" />
+                        <div class="form-group">
+                            <label for="editNome" class="control-label">Nome:</label>
+                            <input type="text" class="form-control" id="editNome" />
+                        </div>
+                        <div class="form-group">
+                            <label for="editCpf" class="control-label">CPF:</label>
+                            <input type="text" class="form-control" id="editCpf" />
+                        </div>
+                        <div class="form-group">
+                            <label for="editDataNascimento" class="control-label">Data Nascimento:</label>
+                            <input type="date" class="form-control" id="editDataNascimento" />
+                        </div>
+                        <div class="form-group">
+                            <label for="editEstado" class="control-label">Estado:</label>
+                            <input type="text" class="form-control" id="editEstado" />
+                        </div>
+                        <div class="form-group">
+                            <label for="editCidade" class="control-label">Cidade:</label>
+                            <input type="text" class="form-control" id="editCidade" />
+                        </div>
+                        <div class="form-group">
+                            <label for="editSexo" class="control-label">Sexo:</label>
+                            <input type="text" class="form-control" id="editSexo" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="saveEditCliente">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="~/lib/jquery/jquery.min.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#editClienteModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget);
+                var clienteId = button.data('id');
+
+                $.ajax({
+                    url: '@Url.Action("GetCliente", "Cliente")',
+                    type: 'GET',
+                    data: { id: clienteId },
+                    success: function (data) {
+                        $('#editClienteId').val(data.id);
+                        $('#editNome').val(data.nome);
+                        $('#editCpf').val(data.cpf);
+                        $('#editDataNascimento').val(data.dataNascimento.split('T')[0]);
+                        $('#editEstado').val(data.estado);
+                        $('#editCidade').val(data.cidade);
+                        $('#editSexo').val(data.sexo);
+                    }
+                });
+            });
+
+            $('#saveEditCliente').on('click', function () {
+                var cliente = {
+                    Id: $('#editClienteId').val(),
+                    Nome: $('#editNome').val(),
+                    Cpf: $('#editCpf').val(),
+                    DataNascimento: $('#editDataNascimento').val(),
+                    Estado: $('#editEstado').val(),
+                    Cidade: $('#editCidade').val(),
+                    Sexo: $('#editSexo').val()
+                };
+
+                $.ajax({
+                    url: '@Url.Action("Edit", "Cliente")',
+                    type: 'POST',
+                    data: cliente,
+                    success: function (data) {
+                        if (data.success) {
+                            $('#editClienteModal').modal('hide');
+                            location.reload(); // Recarregar a página para ver as atualizações
+                        } else {
+                            alert('Erro ao salvar o cliente');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

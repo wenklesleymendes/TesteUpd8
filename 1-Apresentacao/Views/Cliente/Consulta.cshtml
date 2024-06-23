@@ -1,10 +1,4 @@
-﻿@model IEnumerable<Domino.Entities.Cliente>
-
-@{
-    ViewData["Title"] = "Consulta Cliente";
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -204,67 +198,6 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#editClienteModal').on('show.bs.modal', function (event) {
-                var button = $(event.relatedTarget);
-                var clienteId = button.data('id');
-                console.log('Cliente ID:', clienteId); // Adicione esta linha para depuração
-
-                $.ajax({
-                    url: '@Url.Action("GetCliente", "Cliente")',
-                    type: 'GET',
-                    data: { id: clienteId },
-                    success: function (data) {
-                        console.log('Dados recebidos:', data); // Adicione esta linha para depuração
-                        $('#editClienteId').val(data.id);
-                        $('#editNome').val(data.nome);
-                        $('#editCpf').val(data.cpf);
-                        $('#editDataNascimento').val(data.dataNascimento.split('T')[0]);
-                        $('#editEstado').val(data.estado);
-                        $('#editCidade').val(data.cidade);
-                        $('#editSexo').val(data.sexo);
-                    },
-                    error: function (xhr, status, error) {
-                        console.error('Erro ao carregar os dados do cliente:', error); // Adicione esta linha para depuração
-                        alert('Erro ao carregar os dados do cliente.');
-                    }
-                });
-            });
-
-            $('#saveEditCliente').on('click', function () {
-                var cliente = {
-                    Id: $('#editClienteId').val(),
-                    Nome: $('#editNome').val(),
-                    Cpf: $('#editCpf').val(),
-                    DataNascimento: $('#editDataNascimento').val(),
-                    Estado: $('#editEstado').val(),
-                    Cidade: $('#editCidade').val(),
-                    Sexo: $('#editSexo').val()
-                };
-
-                console.log('Dados para salvar:', cliente); // Adicione esta linha para depuração
-
-                $.ajax({
-                    url: '@Url.Action("Edit", "Cliente")',
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify(cliente),
-                    success: function (data) {
-                        if (data.success) {
-                            $('#editClienteModal').modal('hide');
-                            location.reload(); // Recarregar a página para ver as atualizações
-                        } else {
-                            alert('Erro ao salvar o cliente');
-                        }
-                    },
-                    error: function (xhr, status, error) {
-                        console.error('Erro ao salvar o cliente:', error); // Adicione esta linha para depuração
-                        alert('Erro ao salvar o cliente.');
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="~/js/Cliente/consulta-cliente.js"></script> <!-- Referência ao arquivo JS -->
 </body>
 </html>

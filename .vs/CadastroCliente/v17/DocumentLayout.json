@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\wwwroot\\lib\\jquery\\dist\\jquery.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\wwwroot\\lib\\jquery\\dist\\jquery.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|c:\\users\\user\\desktop\\clones\\testeupd8\\1-apresentacao\\views\\cliente\\consulta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2377B484-24F2-4B55-900E-18482F61395D}|1-Apresentacao\\Presentation.csproj|solutionrelative:1-apresentacao\\views\\cliente\\consulta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,39 +50,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "jquery.js",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+              "RelativeDocumentMoniker": "1-Apresentacao\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+              "RelativeToolTip": "1-Apresentacao\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+              "ViewState": "AQIAAFIqAAAAAAAAAAAkwIEqAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-23T13:31:01.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Program.cs",
+              "RelativeDocumentMoniker": "1-Apresentacao\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Program.cs",
+              "RelativeToolTip": "1-Apresentacao\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T13:14:28.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ClienteService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\2-Aplicacao\\Services\\ClienteService.cs",
               "RelativeDocumentMoniker": "2-Aplicacao\\Services\\ClienteService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\2-Aplicacao\\Services\\ClienteService.cs",
               "RelativeToolTip": "2-Aplicacao\\Services\\ClienteService.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAmwDIAAAAAAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAIwDIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T12:53:20.391Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ClienteController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\ClienteController.cs",
               "RelativeDocumentMoniker": "1-Apresentacao\\Controllers\\ClienteController.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Controllers\\ClienteController.cs",
               "RelativeToolTip": "1-Apresentacao\\Controllers\\ClienteController.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAwwGgAAAAAAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAowGgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T11:53:55.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Consulta.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Views\\Cliente\\Consulta.cshtml",
               "RelativeDocumentMoniker": "1-Apresentacao\\Views\\Cliente\\Consulta.cshtml",
               "ToolTip": "C:\\Users\\User\\Desktop\\Clones\\TesteUpd8\\1-Apresentacao\\Views\\Cliente\\Consulta.cshtml",
               "RelativeToolTip": "1-Apresentacao\\Views\\Cliente\\Consulta.cshtml",
-              "ViewState": "AQIAAKAAAAAAAAAAAAAowAIBAAAAAAAA",
+              "ViewState": "AQIAAMAAAAAAAAAAAADwvwIBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-23T02:32:05.16Z",
               "EditorCaption": ""

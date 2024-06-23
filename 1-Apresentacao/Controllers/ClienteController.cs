@@ -63,7 +63,7 @@ namespace Presentation.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Cliente cliente)
+        public async Task<IActionResult> Edit([FromBody] Cliente cliente)
         {
             if (!ModelState.IsValid)
             {

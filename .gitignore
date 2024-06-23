@@ -76,3 +76,10 @@ obj/Debug/
 /4-InfraEstrutura/obj/Debug/net8.0/Infrastructure.dll
 /4-InfraEstrutura/obj/Debug/net8.0/Infrastructure.pdb
 /4-InfraEstrutura/obj/Debug/net8.0/Infrastructure.sourcelink.json
+/1-Apresentacao/obj/Debug/net8.0/staticwebassets/msbuild.Presentation.Microsoft.AspNetCore.StaticWebAssets.props
+/1-Apresentacao/bin/Debug/net8.0/Presentation.staticwebassets.runtime.json
+/1-Apresentacao/obj/Debug/net8.0/Presentation.GeneratedMSBuildEditorConfig.editorconfig
+/1-Apresentacao/obj/Debug/net8.0/project.razor.vs.bin
+/1-Apresentacao/obj/Debug/net8.0/staticwebassets.build.json
+/1-Apresentacao/obj/Debug/net8.0/staticwebassets.development.json
+/1-Apresentacao/obj/Debug/net8.0/staticwebassets.pack.json

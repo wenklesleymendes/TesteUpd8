@@ -1,73 +1,122 @@
-﻿function openEditModal(button) {
-    var clienteId = $(button).data('id');
-    var nome = $(button).data('nome');
-    var cpf = $(button).data('cpf');
-    var dataNascimento = $(button).data('datanascimento');
-    var endereco = $(button).data('endereco');
-    var estado = $(button).data('estado');
-    var cidade = $(button).data('cidade');
-    var sexo = $(button).data('sexo');
+﻿$(document).ready(function () {
 
-    $('#editClienteId').val(clienteId);
-    $('#editNome').val(nome);
-    $('#editCpf').val(cpf);
-    $('#editDataNascimento').val(dataNascimento);
-    $('#editEndereco').val(endereco);
-    $('#editEstado').val(estado);
-    $('#editCidade').val(cidade);
-    $('#editSexo').val(sexo);
+    $('#Cpf').mask('000.000.000-00', { reverse: true });
 
-    $('#editClienteModal').modal('show');
-}
+    function setTodayDate() {
+        var today = new Date().toISOString().split('T')[0];
+        $('#DataNascimento').val(today);
+    }
 
+    var dataNascimento = $('#DataNascimento').val();
+    if (!dataNascimento || dataNascimento === "0001-01-01") {
+        setTodayDate();
+    }
 
-function saveEdicaoCliente() {
-    debugger;
-    var cliente = {
-        Id: document.getElementById('editClienteId').value,
-        Nome: document.getElementById('editNome').value,
-        Cpf: document.getElementById('editCpf').value,
-        DataNascimento: document.getElementById('editDataNascimento').value,
-        Endereco: document.getElementById('editEndereco').value, // Adicionado campo Endereço
-        Estado: document.getElementById('editEstado').value,
-        Cidade: document.getElementById('editCidade').value,
-        Sexo: document.getElementById('editSexo').value
-    };
+    // Fetch estados from IBGE API
+    $.ajax({
+        url: 'https://servicodados.ibge.gov.br/api/v1/localidades/estados',
+        method: 'GET',
+        success: function (data) {
+            var estadoSelect = $('#Estado');
+            data.sort(function (a, b) {
+                return a.nome.localeCompare(b.nome);
+            });
+            data.forEach(function (estado) {
+                estadoSelect.append(new Option(estado.nome, estado.id));
+            });
+        }
+    });
 
-    console.log('Dados para salvar:', cliente); // Depuração
-
-    fetch('/Cliente/Editar', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'RequestVerificationToken': document.getElementsByName('__RequestVerificationToken')[0].value // Token de validação anti-CSRF
-        },
-        body: JSON.stringify(cliente)
-    })
-        .then(response => {
-            console.log('Response status:', response.status);
-            console.log('Response status text:', response.statusText);
-            return response.text().then(text => {
-                console.log('Response text:', text);
-                try {
-                    return text ? JSON.parse(text) : {}; // Garante que o texto não esteja vazio antes de analisar
-                } catch (error) {
-                    throw new Error('Erro ao analisar a resposta JSON: ' + error.message + ' - Resposta: ' + text);
+    // Fetch cidades based on selected estado
+    $('#Estado').change(function () {
+        var estadoId = $(this).val();
+        if (estadoId) {
+            $.ajax({
+                url: 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/' + estadoId + '/municipios',
+                method: 'GET',
+                success: function (data) {
+                    var cidadeSelect = $('#Cidade');
+                    cidadeSelect.empty();
+                    cidadeSelect.append(new Option('Selecione', ''));
+                    data.sort(function (a, b) {
+                        return a.nome.localeCompare(b.nome);
+                    });
+                    data.forEach(function (cidade) {
+                        cidadeSelect.append(new Option(cidade.nome, cidade.id));
+                    });
                 }
             });
-        })
-        .then(data => {
-            console.log('Dados recebidos após salvar:', data); // Depuração
-            if (data.success) {
-                $('#editClienteModal').modal('hide');
-                location.reload(); // Recarregar a página para ver as atualizações
-            } else {
-                alert('Erro ao salvar o cliente: ' + (data.message || 'Erro desconhecido'));
-            }
-        })
-        .catch(error => {
-            console.error('Erro ao salvar o cliente:', error); // Depuração
-            alert('Erro ao salvar o cliente: ' + error.message);
-        });
-}
+        } else {
+            $('#Cidade').empty();
+            $('#Cidade').append(new Option('Selecione', ''));
+        }
+    });
 
+    $('#resetBtn').click(function () {
+        setTimeout(setTodayDate, 0);
+    });
+
+    $("#clienteForm").validate({
+        errorClass: "is-invalid",
+        validClass: "is-valid",
+        errorPlacement: function (error, element) {
+            if (element.attr("name") == "Sexo") {
+                error.insertAfter(element.closest(".form-check-inline").last());
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        rules: {
+            Cpf: {
+                required: true,
+                cpfBR: true
+            },
+            Nome: "required",
+            DataNascimento: "required",
+            Sexo: "required",
+            Endereco: "required",
+            Estado: "required",
+            Cidade: "required"
+        },
+        messages: {
+            Cpf: {
+                required: "Por favor, insira o CPF",
+                cpfBR: "Por favor, insira um CPF válido"
+            },
+            Nome: "Por favor, insira o nome",
+            DataNascimento: "Por favor, insira a data de nascimento",
+            Sexo: "Por favor, selecione o sexo",
+            Endereco: "Por favor, insira o endereço",
+            Estado: "Por favor, selecione o estado",
+            Cidade: "Por favor, selecione a cidade"
+        }
+    });
+
+    $.validator.addMethod("cpfBR", function (value, element) {
+        value = value.replace(/[^\d]+/g, '');
+        if (value.length !== 11) {
+            return false;
+        }
+        var sum = 0,
+            remainder;
+        for (var i = 1; i <= 9; i++) {
+            sum = sum + parseInt(value.substring(i - 1, i)) * (11 - i);
+        }
+        remainder = (sum * 10) % 11;
+        if ((remainder === 10) || (remainder === 11)) {
+            remainder = 0;
+        }
+        if (remainder !== parseInt(value.substring(9, 10))) {
+            return false;
+        }
+        sum = 0;
+        for (i = 1; i <= 10; i++) {
+            sum = sum + parseInt(value.substring(i - 1, i)) * (12 - i);
+        }
+        remainder = (sum * 10) % 11;
+        if ((remainder === 10) || (remainder === 11)) {
+            remainder = 0;
+        }
+        return remainder === parseInt(value.substring(10, 11));
+    }, "Por favor, insira um CPF válido.");
+});

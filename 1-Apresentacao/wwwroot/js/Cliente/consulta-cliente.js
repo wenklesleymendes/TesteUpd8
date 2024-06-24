@@ -1,4 +1,33 @@
-﻿// Função para abrir o modal de edição de cliente
+﻿$(document).ready(function () {
+    $('#pesquisar').click(function () {
+        $.ajax({
+            url: '/Cliente/Pesquisa',
+            type: 'GET',
+            data: $('#searchForm').serialize(),
+            success: function (data) {
+                $('#resultContainer').html(data);
+            },
+            error: function () {
+                alert('Erro ao carregar dados');
+            }
+        });
+    });
+
+    $('#searchForm').on('reset', function () {
+        // Fazer uma nova requisição AJAX para obter todos os dados
+        $.ajax({
+            url: '/Cliente/Consulta',
+            type: 'GET',
+            success: function (data) {
+                $('#resultContainer').html($(data).find('#resultContainer').html());
+            },
+            error: function () {
+                alert('Erro ao carregar dados');
+            }
+        });
+    });
+});
+
 function openEditModal(button) {
     var clienteId = $(button).data('id');
     var nome = $(button).data('nome');
@@ -69,33 +98,3 @@ function saveEdicaoCliente() {
             alert('Erro ao salvar o cliente: ' + error.message);
         });
 }
-
-$(document).ready(function () {
-    $('#pesquisar').click(function () {
-        $.ajax({
-            url: '@Url.Action("Pesquisa", "Cliente")',
-            type: 'GET',
-            data: $('#searchForm').serialize(),
-            success: function (data) {
-                $('#resultContainer').html(data);
-            },
-            error: function () {
-                alert('Erro ao carregar dados');
-            }
-        });
-    });
-
-    $('#searchForm').on('reset', function () {
-        // Fazer uma nova requisição AJAX para obter todos os dados
-        $.ajax({
-            url: '@Url.Action("Consulta", "Cliente")',
-            type: 'GET',
-            success: function (data) {
-                $('#resultContainer').html($(data).find('#resultContainer').html());
-            },
-            error: function () {
-                alert('Erro ao carregar dados');
-            }
-        });
-    });
-});

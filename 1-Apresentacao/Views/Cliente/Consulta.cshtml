@@ -14,7 +14,7 @@
     <style>
         .card-header.inverted {
             background-color: white;
-            color: #007bff; /* Bootstrap primary color */
+            color: #007bff; 
         }
 
             .card-header.inverted h2 {
@@ -77,14 +77,12 @@
                                 <option>Todos</option>
                                 <option value="SP">SP</option>
                                 <option value="RJ">RJ</option>
-                                <!-- Adicione mais opções conforme necessário -->
                             </select>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="cidade">Cidade:</label>
                             <select class="form-control" id="cidade" name="Cidade">
                                 <option>Todos</option>
-                                <!-- Adicione mais opções conforme necessário -->
                             </select>
                         </div>
                         <div class="form-group col-md-3 d-flex align-items-end">
@@ -144,13 +142,12 @@
                                 <td>@cliente.Estado</td>
                                 <td>@cliente.Cidade</td>
                                 <td>@cliente.Sexo</td>
-                                <td style="display:none;">@cliente.Endereco</td> <!-- Campo escondido -->
+                                <td style="display:none;">@cliente.Endereco</td>
                             </tr>
                         }
                     </tbody>
                 </table>
 
-                <!-- Paginação (se necessário) -->
                 <nav aria-label="Page navigation">
                     <ul class="pagination justify-content-center">
                         <li class="page-item disabled">
@@ -195,10 +192,6 @@
             $('#editSexo').val(sexo);
 
             $('#editClienteModal').modal('show');
-        }
-
-        function saveEditCliente() {
-            // Aqui você pode implementar a lógica para salvar as alterações do cliente
         }
     </script>
 </body>

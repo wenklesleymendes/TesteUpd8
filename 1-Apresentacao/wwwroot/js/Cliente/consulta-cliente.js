@@ -28,19 +28,19 @@ function saveEdicaoCliente() {
         Nome: document.getElementById('editNome').value,
         Cpf: document.getElementById('editCpf').value,
         DataNascimento: document.getElementById('editDataNascimento').value,
-        Endereco: document.getElementById('editEndereco').value, // Adicionado campo Endereço
+        Endereco: document.getElementById('editEndereco').value,
         Estado: document.getElementById('editEstado').value,
         Cidade: document.getElementById('editCidade').value,
         Sexo: document.getElementById('editSexo').value
     };
 
-    console.log('Dados para salvar:', cliente); // Depuração
+    console.log('Dados para salvar:', cliente);
 
     fetch('/Cliente/Editar', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'RequestVerificationToken': document.getElementsByName('__RequestVerificationToken')[0].value // Token de validação anti-CSRF
+            'RequestVerificationToken': document.getElementsByName('__RequestVerificationToken')[0].value 
         },
         body: JSON.stringify(cliente)
     })
@@ -50,23 +50,23 @@ function saveEdicaoCliente() {
             return response.text().then(text => {
                 console.log('Response text:', text);
                 try {
-                    return text ? JSON.parse(text) : {}; // Garante que o texto não esteja vazio antes de analisar
+                    return text ? JSON.parse(text) : {};
                 } catch (error) {
                     throw new Error('Erro ao analisar a resposta JSON: ' + error.message + ' - Resposta: ' + text);
                 }
             });
         })
         .then(data => {
-            console.log('Dados recebidos após salvar:', data); // Depuração
+            console.log('Dados recebidos após salvar:', data);
             if (data.success) {
                 $('#editClienteModal').modal('hide');
-                location.reload(); // Recarregar a página para ver as atualizações
+                location.reload();
             } else {
                 alert('Erro ao salvar o cliente: ' + (data.message || 'Erro desconhecido'));
             }
         })
         .catch(error => {
-            console.error('Erro ao salvar o cliente:', error); // Depuração
+            console.error('Erro ao salvar o cliente:', error);
             alert('Erro ao salvar o cliente: ' + error.message);
         });
 }

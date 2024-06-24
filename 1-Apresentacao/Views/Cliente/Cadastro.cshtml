@@ -75,8 +75,13 @@
 </div>
 
 @section Scripts {
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script>
         $(document).ready(function () {
+            // Apply CPF mask
+            $('#Cpf').mask('000.000.000-00', { reverse: true });
+
             // Fetch estados from IBGE API
             $.ajax({
                 url: 'https://servicodados.ibge.gov.br/api/v1/localidades/estados',

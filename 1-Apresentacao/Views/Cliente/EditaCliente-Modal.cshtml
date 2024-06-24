@@ -1,5 +1,4 @@
-﻿<!-- editacliente-modal.cshtml -->
-<div class="modal fade" id="editClienteModal" tabindex="-1" role="dialog" aria-labelledby="editClienteModalLabel" aria-hidden="true">
+﻿<div class="modal fade" id="editClienteModal" tabindex="-1" role="dialog" aria-labelledby="editClienteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -23,6 +22,10 @@
                     <input type="date" class="form-control" id="editDataNascimento" />
                 </div>
                 <div class="form-group">
+                    <label for="editEndereco">Endereço</label>
+                    <input type="date" class="form-control" id="editEndereco" />
+                </div>
+                <div class="form-group">
                     <label for="editEstado">Estado</label>
                     <input type="text" class="form-control" id="editEstado" />
                 </div>
@@ -37,7 +40,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary" id="saveEditCliente">Salvar</button>
+                <button type="button" class="btn btn-primary" id="saveEditCliente" onclick="saveEditCliente()">Salvar</button>
             </div>
         </div>
     </div>

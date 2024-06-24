@@ -1,8 +1,6 @@
 ﻿function openEditModal(button) {
-    console.log('Modal está sendo exibido'); // Depuração
-    debugger;
+
     var clienteId = button.getAttribute('data-id');
-    console.log('Cliente ID:', clienteId); // Depuração
 
     fetch(`/Cliente/GetCliente?id=${clienteId}`)
         .then(response => response.json())
@@ -12,6 +10,7 @@
             document.getElementById('editNome').value = data.nome;
             document.getElementById('editCpf').value = data.cpf;
             document.getElementById('editDataNascimento').value = data.dataNascimento;
+            document.getElementById('editEndereco').value = data.endereco;
             document.getElementById('editEstado').value = data.estado;
             document.getElementById('editCidade').value = data.cidade;
             document.getElementById('editSexo').value = data.sexo;
@@ -24,6 +23,7 @@
 }
 
 function saveEditCliente() {
+    debugger;
     var cliente = {
         Id: document.getElementById('editClienteId').value,
         Nome: document.getElementById('editNome').value,
@@ -36,24 +36,38 @@ function saveEditCliente() {
 
     console.log('Dados para salvar:', cliente); // Depuração
 
-    fetch('/Cliente/Edit', {
+    fetch('/Cliente/Editar', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'RequestVerificationToken': document.getElementsByName('__RequestVerificationToken')[0].value // Token de validação anti-CSRF
         },
         body: JSON.stringify(cliente)
     })
-        .then(response => response.json())
+        .then(response => {
+            console.log('Response status:', response.status);
+            console.log('Response status text:', response.statusText);
+            return response.text().then(text => {
+                console.log('Response text:', text);
+                try {
+                    return text ? JSON.parse(text) : {}; // Garante que o texto não esteja vazio antes de analisar
+                } catch (error) {
+                    throw new Error('Erro ao analisar a resposta JSON: ' + error.message + ' - Resposta: ' + text);
+                }
+            });
+        })
         .then(data => {
+            console.log('Dados recebidos após salvar:', data); // Depuração
             if (data.success) {
                 $('#editClienteModal').modal('hide');
                 location.reload(); // Recarregar a página para ver as atualizações
             } else {
-                alert('Erro ao salvar o cliente');
+                alert('Erro ao salvar o cliente: ' + (data.message || 'Erro desconhecido'));
             }
         })
         .catch(error => {
             console.error('Erro ao salvar o cliente:', error); // Depuração
-            alert('Erro ao salvar o cliente.');
+            alert('Erro ao salvar o cliente: ' + error.message);
         });
 }
+

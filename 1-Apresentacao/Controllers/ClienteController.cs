@@ -72,11 +72,24 @@ namespace Presentation.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([FromBody] Cliente cliente)
+        public async Task<IActionResult> Editar([FromBody] Cliente cliente)
         {
+            if (cliente == null)
+            {
+                _logger.LogError("Cliente é null.");
+                return Json(new { success = false, message = "Dados do cliente não fornecidos." });
+            }
+
             if (!ModelState.IsValid)
             {
-                return Json(new { success = false });
+                _logger.LogError("ModelState é inválido.");
+                // Adicionando detalhes sobre os erros de validação
+                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+                foreach (var error in errors)
+                {
+                    _logger.LogError(error);
+                }
+                return Json(new { success = false, message = "Dados do cliente inválidos.", errors });
             }
 
             try
@@ -88,9 +101,10 @@ namespace Presentation.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Erro ao atualizar o cliente.");
-                return Json(new { success = false });
+                return Json(new { success = false, message = "Erro ao atualizar o cliente. " + ex.Message });
             }
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]

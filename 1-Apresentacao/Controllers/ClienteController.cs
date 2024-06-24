@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Aplicacao.Services;
 using Domino.Entities;
-using System.Threading.Tasks;
-using Aplicacao.Services;
-using Microsoft.Extensions.Logging;
-using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers
 {
@@ -58,7 +55,7 @@ namespace Presentation.Controllers
 
             if (!string.IsNullOrEmpty(cpf))
             {
-                clientes = clientes.Where(c => c.Cpf == cpf).ToList();
+                clientes = clientes.Where(c => c.Cpf.Contains(cpf)).ToList();
             }
             if (!string.IsNullOrEmpty(nome))
             {
@@ -68,11 +65,11 @@ namespace Presentation.Controllers
             {
                 clientes = clientes.Where(c => c.Sexo == sexo).ToList();
             }
-            if (!string.IsNullOrEmpty(estado))
+            if (!string.IsNullOrEmpty(estado) && estado != "Todos")
             {
                 clientes = clientes.Where(c => c.Estado == estado).ToList();
             }
-            if (!string.IsNullOrEmpty(cidade))
+            if (!string.IsNullOrEmpty(cidade) && cidade != "Todos")
             {
                 clientes = clientes.Where(c => c.Cidade == cidade).ToList();
             }
@@ -96,7 +93,7 @@ namespace Presentation.Controllers
                 id = cliente.Id,
                 nome = cliente.Nome,
                 cpf = cliente.Cpf,
-                dataNascimento = cliente.DataNascimento.ToString("yyyy-MM-dd"),
+                dataNascimento = cliente.DataNascimento.ToString("yyyy-MM-dd"), // Formato compatível com input date
                 estado = cliente.Estado,
                 cidade = cliente.Cidade,
                 sexo = cliente.Sexo

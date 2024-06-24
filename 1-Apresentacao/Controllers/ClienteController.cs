@@ -49,6 +49,7 @@ namespace Presentation.Controllers
         }
 
         [HttpGet]
+        [HttpGet]
         public async Task<IActionResult> Pesquisa(string cpf, string nome, string sexo, string estado, string cidade, DateTime? dataNascimento)
         {
             var clientes = await _clienteService.ObterTodosClientesAsync();
@@ -63,7 +64,7 @@ namespace Presentation.Controllers
             }
             if (!string.IsNullOrEmpty(sexo))
             {
-                clientes = clientes.Where(c => c.Sexo == sexo).ToList();
+                clientes = clientes.Where(c => c.Sexo.Equals(sexo, StringComparison.OrdinalIgnoreCase)).ToList();
             }
             if (!string.IsNullOrEmpty(estado) && estado != "Todos")
             {

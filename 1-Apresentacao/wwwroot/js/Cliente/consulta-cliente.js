@@ -14,7 +14,6 @@
     });
 
     $('#searchForm').on('reset', function () {
-        // Fazer uma nova requisição AJAX para obter todos os dados
         $.ajax({
             url: '/Cliente/Consulta',
             type: 'GET',

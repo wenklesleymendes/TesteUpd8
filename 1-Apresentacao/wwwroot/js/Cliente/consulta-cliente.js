@@ -49,6 +49,46 @@ function openEditModal(button) {
     $('#editClienteModal').modal('show');
 }
 
+// Fetch estados from IBGE API
+$.ajax({
+    url: 'https://servicodados.ibge.gov.br/api/v1/localidades/estados',
+    method: 'GET',
+    success: function (data) {
+        var estadoSelect = $('#Estado');
+        data.sort(function (a, b) {
+            return a.nome.localeCompare(b.nome);
+        });
+        data.forEach(function (estado) {
+            estadoSelect.append(new Option(estado.nome, estado.sigla)); // Usar sigla do estado para URL correta
+        });
+    }
+});
+
+// Fetch cidades based on selected estado
+$('#Estado').change(function () {
+    var estadoSigla = $(this).val();
+    if (estadoSigla) {
+        $.ajax({
+            url: 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/' + estadoSigla + '/distritos',
+            method: 'GET',
+            success: function (data) {
+                var cidadeSelect = $('#Cidade');
+                cidadeSelect.empty();
+                cidadeSelect.append(new Option('Selecione', ''));
+                data.sort(function (a, b) {
+                    return a.nome.localeCompare(b.nome);
+                });
+                data.forEach(function (cidade) {
+                    cidadeSelect.append(new Option(cidade.nome, cidade.nome));
+                });
+            }
+        });
+    } else {
+        $('#Cidade').empty();
+        $('#Cidade').append(new Option('Selecione', ''));
+    }
+});
+
 function saveEdicaoCliente() {
     var cliente = {
         Id: document.getElementById('editClienteId').value,

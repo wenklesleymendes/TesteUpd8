@@ -30,7 +30,7 @@
                                 <input type="date" class="form-control" id="DataNascimento" name="DataNascimento" value="@Model.DataNascimento.ToString("yyyy-MM-dd")" />
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label">Sexo:</label>
+                                <label class="form-label d-block">Sexo:</label>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" id="Masculino" name="Sexo" value="Masculino" @(Model.Sexo == "Masculino" ? "checked" : "") />
                                     <label class="form-check-label" for="Masculino">Masculino</label>
@@ -81,6 +81,13 @@
         $(document).ready(function () {
             // Apply CPF mask
             $('#Cpf').mask('000.000.000-00', { reverse: true });
+
+            // Set current date for DataNascimento if it's not already set
+            var dataNascimento = $('#DataNascimento').val();
+            if (!dataNascimento || dataNascimento === "0001-01-01") {
+                var today = new Date().toISOString().split('T')[0];
+                $('#DataNascimento').val(today);
+            }
 
             // Fetch estados from IBGE API
             $.ajax({

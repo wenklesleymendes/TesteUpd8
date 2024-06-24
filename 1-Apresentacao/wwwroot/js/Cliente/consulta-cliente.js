@@ -59,7 +59,7 @@ $.ajax({
             return a.nome.localeCompare(b.nome);
         });
         data.forEach(function (estado) {
-            estadoSelect.append(new Option(estado.nome, estado.sigla)); // Usar sigla do estado para URL correta
+            estadoSelect.append(new Option(estado.nome, estado.sigla));
         });
     }
 });

@@ -22,17 +22,17 @@
                 return a.nome.localeCompare(b.nome);
             });
             data.forEach(function (estado) {
-                estadoSelect.append(new Option(estado.nome, estado.id));
+                estadoSelect.append(new Option(estado.nome, estado.sigla)); // Usar sigla do estado para URL correta
             });
         }
     });
 
     // Fetch cidades based on selected estado
     $('#Estado').change(function () {
-        var estadoId = $(this).val();
-        if (estadoId) {
+        var estadoSigla = $(this).val();
+        if (estadoSigla) {
             $.ajax({
-                url: 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/' + estadoId + '/municipios',
+                url: 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/' + estadoSigla + '/distritos',
                 method: 'GET',
                 success: function (data) {
                     var cidadeSelect = $('#Cidade');
@@ -42,7 +42,7 @@
                         return a.nome.localeCompare(b.nome);
                     });
                     data.forEach(function (cidade) {
-                        cidadeSelect.append(new Option(cidade.nome, cidade.id));
+                        cidadeSelect.append(new Option(cidade.nome, cidade.nome));
                     });
                 }
             });

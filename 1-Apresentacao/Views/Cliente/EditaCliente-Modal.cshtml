@@ -1,4 +1,5 @@
-﻿<div class="modal fade" id="editClienteModal" tabindex="-1" role="dialog" aria-labelledby="editClienteModalLabel" aria-hidden="true">
+﻿<!-- editacliente-modal.cshtml -->
+<div class="modal fade" id="editClienteModal" tabindex="-1" role="dialog" aria-labelledby="editClienteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -8,36 +9,34 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="editClienteForm">
-                    <input type="hidden" id="editClienteId" name="Id" />
-                    <div class="form-group">
-                        <label for="editNome" class="control-label">Nome:</label>
-                        <input type="text" class="form-control" id="editNome" name="Nome" />
-                    </div>
-                    <div class="form-group">
-                        <label for="editCpf" class="control-label">CPF:</label>
-                        <input type="text" class="form-control" id="editCpf" name="Cpf" />
-                    </div>
-                    <div class="form-group">
-                        <label for="editDataNascimento" class="control-label">Data Nascimento:</label>
-                        <input type="date" class="form-control" id="editDataNascimento" name="DataNascimento" />
-                    </div>
-                    <div class="form-group">
-                        <label for="editEstado" class="control-label">Estado:</label>
-                        <input type="text" class="form-control" id="editEstado" name="Estado" />
-                    </div>
-                    <div class="form-group">
-                        <label for="editCidade" class="control-label">Cidade:</label>
-                        <input type="text" class="form-control" id="editCidade" name="Cidade" />
-                    </div>
-                    <div class="form-group">
-                        <label for="editSexo" class="control-label">Sexo:</label>
-                        <input type="text" class="form-control" id="editSexo" name="Sexo" />
-                    </div>
-                </form>
+                <input type="hidden" id="editClienteId" />
+                <div class="form-group">
+                    <label for="editNome">Nome</label>
+                    <input type="text" class="form-control" id="editNome" />
+                </div>
+                <div class="form-group">
+                    <label for="editCpf">CPF</label>
+                    <input type="text" class="form-control" id="editCpf" />
+                </div>
+                <div class="form-group">
+                    <label for="editDataNascimento">Data de Nascimento</label>
+                    <input type="date" class="form-control" id="editDataNascimento" />
+                </div>
+                <div class="form-group">
+                    <label for="editEstado">Estado</label>
+                    <input type="text" class="form-control" id="editEstado" />
+                </div>
+                <div class="form-group">
+                    <label for="editCidade">Cidade</label>
+                    <input type="text" class="form-control" id="editCidade" />
+                </div>
+                <div class="form-group">
+                    <label for="editSexo">Sexo</label>
+                    <input type="text" class="form-control" id="editSexo" />
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                 <button type="button" class="btn btn-primary" id="saveEditCliente">Salvar</button>
             </div>
         </div>

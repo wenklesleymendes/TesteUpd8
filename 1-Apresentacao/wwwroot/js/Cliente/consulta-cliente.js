@@ -1,43 +1,59 @@
-﻿<div class="modal fade" id="editClienteModal" tabindex="-1" role="dialog" aria-labelledby="editClienteModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="editClienteModalLabel">Editar Cliente</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <input type="hidden" id="editClienteId" />
-                <div class="form-group">
-                    <label for="editNome">Nome</label>
-                    <input type="text" class="form-control" id="editNome" />
-                </div>
-                <div class="form-group">
-                    <label for="editCpf">CPF</label>
-                    <input type="text" class="form-control" id="editCpf" />
-                </div>
-                <div class="form-group">
-                    <label for="editDataNascimento">Data de Nascimento</label>
-                    <input type="date" class="form-control" id="editDataNascimento" />
-                </div>
-                <div class="form-group">
-                    <label for="editEstado">Estado</label>
-                    <input type="text" class="form-control" id="editEstado" />
-                </div>
-                <div class="form-group">
-                    <label for="editCidade">Cidade</label>
-                    <input type="text" class="form-control" id="editCidade" />
-                </div>
-                <div class="form-group">
-                    <label for="editSexo">Sexo</label>
-                    <input type="text" class="form-control" id="editSexo" />
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary" id="saveEditCliente">Salvar</button>
-            </div>
-        </div>
-    </div>
-</div>
+﻿function openEditModal(button) {
+    console.log('Modal está sendo exibido'); // Depuração
+    debugger;
+    var clienteId = button.getAttribute('data-id');
+    console.log('Cliente ID:', clienteId); // Depuração
+
+    fetch(`/Cliente/GetCliente?id=${clienteId}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log('Dados recebidos:', data); // Depuração
+            document.getElementById('editClienteId').value = data.id;
+            document.getElementById('editNome').value = data.nome;
+            document.getElementById('editCpf').value = data.cpf;
+            document.getElementById('editDataNascimento').value = data.dataNascimento;
+            document.getElementById('editEstado').value = data.estado;
+            document.getElementById('editCidade').value = data.cidade;
+            document.getElementById('editSexo').value = data.sexo;
+            $('#editClienteModal').modal('show');
+        })
+        .catch(error => {
+            console.error('Erro ao carregar os dados do cliente:', error); // Depuração
+            alert('Erro ao carregar os dados do cliente.');
+        });
+}
+
+function saveEditCliente() {
+    var cliente = {
+        Id: document.getElementById('editClienteId').value,
+        Nome: document.getElementById('editNome').value,
+        Cpf: document.getElementById('editCpf').value,
+        DataNascimento: document.getElementById('editDataNascimento').value,
+        Estado: document.getElementById('editEstado').value,
+        Cidade: document.getElementById('editCidade').value,
+        Sexo: document.getElementById('editSexo').value
+    };
+
+    console.log('Dados para salvar:', cliente); // Depuração
+
+    fetch('/Cliente/Edit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(cliente)
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                $('#editClienteModal').modal('hide');
+                location.reload(); // Recarregar a página para ver as atualizações
+            } else {
+                alert('Erro ao salvar o cliente');
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao salvar o cliente:', error); // Depuração
+            alert('Erro ao salvar o cliente.');
+        });
+}

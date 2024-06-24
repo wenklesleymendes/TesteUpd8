@@ -170,29 +170,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/Cliente/consulta-cliente.js"></script> <!-- Referência ao arquivo JS -->
-
-    <script>
-        function openEditModal(button) {
-            var clienteId = $(button).data('id');
-            var nome = $(button).data('nome');
-            var cpf = $(button).data('cpf');
-            var dataNascimento = $(button).data('datanascimento');
-            var endereco = $(button).data('endereco');
-            var estado = $(button).data('estado');
-            var cidade = $(button).data('cidade');
-            var sexo = $(button).data('sexo');
-
-            $('#editClienteId').val(clienteId);
-            $('#editNome').val(nome);
-            $('#editCpf').val(cpf);
-            $('#editDataNascimento').val(dataNascimento);
-            $('#editEndereco').val(endereco);
-            $('#editEstado').val(estado);
-            $('#editCidade').val(cidade);
-            $('#editSexo').val(sexo);
-
-            $('#editClienteModal').modal('show');
-        }
-    </script>
 </body>
 </html>

@@ -3,7 +3,7 @@ using Domino.Entities;
 using System.Threading.Tasks;
 using Aplicacao.Services;
 using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace Presentation.Controllers
 {
@@ -51,6 +51,39 @@ namespace Presentation.Controllers
             return View(clientes);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Pesquisa(string cpf, string nome, string sexo, string estado, string cidade, DateTime? dataNascimento)
+        {
+            var clientes = await _clienteService.ObterTodosClientesAsync();
+
+            if (!string.IsNullOrEmpty(cpf))
+            {
+                clientes = clientes.Where(c => c.Cpf == cpf).ToList();
+            }
+            if (!string.IsNullOrEmpty(nome))
+            {
+                clientes = clientes.Where(c => c.Nome.Contains(nome)).ToList();
+            }
+            if (!string.IsNullOrEmpty(sexo))
+            {
+                clientes = clientes.Where(c => c.Sexo == sexo).ToList();
+            }
+            if (!string.IsNullOrEmpty(estado))
+            {
+                clientes = clientes.Where(c => c.Estado == estado).ToList();
+            }
+            if (!string.IsNullOrEmpty(cidade))
+            {
+                clientes = clientes.Where(c => c.Cidade == cidade).ToList();
+            }
+            if (dataNascimento.HasValue)
+            {
+                clientes = clientes.Where(c => c.DataNascimento.Date == dataNascimento.Value.Date).ToList();
+            }
+
+            return PartialView("_ClienteGridPartial", clientes);
+        }
+
         public async Task<IActionResult> GetCliente(int id)
         {
             var cliente = await _clienteService.ObterClientePorIdAsync(id);
@@ -63,7 +96,7 @@ namespace Presentation.Controllers
                 id = cliente.Id,
                 nome = cliente.Nome,
                 cpf = cliente.Cpf,
-                dataNascimento = cliente.DataNascimento.ToString("yyyy-MM-dd"), // Formato compatível com input date
+                dataNascimento = cliente.DataNascimento.ToString("yyyy-MM-dd"),
                 estado = cliente.Estado,
                 cidade = cliente.Cidade,
                 sexo = cliente.Sexo
@@ -104,7 +137,6 @@ namespace Presentation.Controllers
                 return Json(new { success = false, message = "Erro ao atualizar o cliente. " + ex.Message });
             }
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
